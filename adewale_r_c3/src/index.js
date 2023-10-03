@@ -3,14 +3,40 @@ import React from 'react';
 import './index.css';
 
 function App() {
-  return (
-    <div>
-    <h1>Hello World</h1>
-    <p>I am Adewale Emmanuel, this is my first React application.</p>
-    </div>
-  );
+  return <div>
+    <Page/>
+    <Skill />
+    <Skillist/>
+  </div>
+
+
 }
 
+function Page (){
+  return <div>
+    <h2>NAME</h2>
+   <p>ADEWALE EMMANUEL</p>
+
+   <h3>EDUCATION BACKGROUND</h3>
+   <p> undergraduate Computer science</p>
+    <h3>SKILLS</h3>
+  </div>
+}
+
+function Skillist(){
+ return <div> 
+  <Skill Skill="React.js"/>
+  <Skill Skill="JavaScript"/>
+  <Skill Skill="Html"/>
+  <Skill Skill="Css"/>
+  </div>
+}
+
+function Skill(props){
+  return <div className="skill">
+      <h2>{props.Skill}</h2>
+  </div>
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(<App/>)
